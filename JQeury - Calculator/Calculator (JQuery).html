@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="Calculator (JQuery).css">
+    <!-- <script src="Calculator (JQuery).js"></script> -->
+
+    <title>Assessment - 3 | Calculator (JQuery)</title>
+</head>
+
+<body>
+
+    <!-- ->->->->->| Main -> START |<-<-<-<-<- -->
+
+    <main>
+
+        <header>
+            <nav> DEG </nav>
+            <!-- <div id="display"> 123 * 5 </div> -->
+            <input type="text" id="calculate" readonly>
+            <!-- <div id="display-result"> 615 </div> -->
+            <input type="text" id="result" readonly>
+        </header>
+
+
+        <section>
+
+            <div id="first-column">
+                <button value="7" onclick="Solve('7')"> 7 </button>
+                <button value="4" onclick="Solve('4')"> 4 </button>
+                <button value="1" onclick="Solve('1')"> 1 </button>
+                <button value="." onclick="Solve('.')"> . </button>
+            </div>
+            <div id="second-column">
+                <button value="8" onclick="Solve('8')"> 8 </button>
+                <button value="5" onclick="Solve('5')"> 5 </button>
+                <button value="2" onclick="Solve('2')"> 2 </button>
+                <button value="0" onclick="Solve('0')"> 0 </button>
+            </div>
+            <div id="third-column">
+                <button value="9" onclick="Solve('9')"> 9 </button>
+                <button value="6" onclick="Solve('6')"> 6 </button>
+                <button value="3" onclick="Solve('3')"> 3 </button>
+                <button value="=" onclick="Result()"> = </button>
+            </div>
+            <div id="fourth-column">
+                <button value="C" onclick="Clear()"> DEL </button>
+                <button value="/" onclick="Solve('/')"> / </button>
+                <button value="*" onclick="Solve('*')"> * </button>
+                <button value="-" onclick="Solve('-')"> - </button>
+                <button value="+" onclick="Solve('+')"> + </button>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- ->->->->->| Main -> END |<-<-<-<-<- -->
+
+
+
+    <script>
+
+        // upper output is for showing value
+
+        let outputUpper = document.querySelector('#upper');
+        // lower output is for showing the result
+        let outputLower = document.querySelector('#lower');
+
+        // function to get number input
+        function pressNum(e) {
+            if (outputLower.innerHTML === '0') {
+                outputLower.innerHTML = e.innerHTML;
+            } else {
+                outputLower.innerHTML += e.innerHTML;
+            }
+        }
+
+        // clear all
+        function pressAllClear() {
+            outputUpper.innerHTML = '';
+            outputLower.innerHTML = '0';
+        }
+
+
+
+        // calculate button
+        function pressEqual() {
+            let exp = outputLower.innerHTML;
+            outputUpper.innerHTML = exp;
+            exp = exp.replace(/×/g, '*').replace(/÷/g, '/');
+            let result;
+            try {
+                result = eval(exp);
+                // if decimal number more than 4 decimal places
+                if (result.toString().indexOf('.') !== -1) {
+                    result = result.toFixed(4);
+                }
+            } catch (e) {
+                result = 'Error';
+            }
+            outputLower.innerHTML = result;
+        }
+
+        function pressOperator(e) {
+            // check last operator
+            let lastOperator = outputLower.innerHTML.slice(-1);
+            if (lastOperator.includes('+', '-', '×', '÷')) {
+                output.innerHTML = outputLower.innerHTML.slice(0, -1) + e.innerHTML;
+            } else {
+                outputLower.innerHTML += e.innerHTML;
+            }
+        }
+
+        function pressDot() {
+            outputLower.innerHTML += '.';
+        }
+
+        function pressBracket(e) {
+            outputLower.innerHTML += e.innerHTML;
+        }
+
+        // attach keyboard event
+        document.addEventListener('keydown', function (e) {
+            switch (e.key) {
+                case '0':
+                    pressNum(document.querySelector('button:nth-child(2)'));
+                    break;
+                case '1':
+                    pressNum(document.querySelector('button:nth-child(5)'));
+                    break;
+                case '2':
+                    pressNum(document.querySelector('button:nth-child(6)'));
+                    break;
+                case '3':
+                    pressNum(document.querySelector('button:nth-child(7)'));
+                    break;
+                case '4':
+                    pressNum(document.querySelector('button:nth-child(9)'));
+                    break;
+                case '5':
+                    pressNum(document.querySelector('button:nth-child(10)'));
+                    break;
+                case '6':
+                    pressNum(document.querySelector('button:nth-child(11)'));
+                    break;
+                case '7':
+                    pressNum(document.querySelector('button:nth-child(13)'));
+                    break;
+                case '8':
+                    pressNum(document.querySelector('button:nth-child(14)'));
+                    break;
+                case '9':
+                    pressNum(document.querySelector('button:nth-child(15)'));
+                    break;
+                case '+':
+                    pressOperator(document.querySelector('button:nth-child(4)'));
+                    break;
+                case '-':
+                    pressOperator(document.querySelector('button:nth-child(8)'));
+                    break;
+                case '*':
+                    pressOperator(document.querySelector('button:nth-child(12)'));
+                    break;
+                case '/':
+                    pressOperator(document.querySelector('button:nth-child(16)'));
+                    break;
+                case '.':
+                    pressDot();
+                    break;
+                case '(':
+                    pressBracket(document.querySelector('button:nth-child(18)'));
+                    break;
+                case ')':
+                    pressBracket(document.querySelector('button:nth-child(19)'));
+                    break;
+                case 'Enter':
+                    // prevent default action
+                    e.preventDefault();
+                    pressEqual();
+                    break;
+                case 'Backspace':
+                    pressClear();
+                    break;
+                case 'Escape':
+                    pressAllClear();
+                    break;
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>

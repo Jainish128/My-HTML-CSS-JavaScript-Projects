@@ -1,0 +1,115 @@
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    width: 100%;
+    height: 100vh;
+    background-color: #999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* ->->->| Main -> START |<-<-<- */
+
+main
+{
+    width: 80%;
+    height: 90vh;
+    /* margin: 20px auto; */
+    /* background-color: orangered; */
+}
+
+section
+{
+    width: 100%;
+    height: 70vh;
+    /* background-color: lightblue; */
+    /* display: flex; */
+    /* overflow-x: scroll; */
+    overflow: hidden;
+    box-shadow: 0 0 10px #111;
+}
+#image
+{
+    width: 100%;
+    height: 100%;
+}
+
+nav
+{
+    width: 100%;
+    height: 15vh;
+    margin: 3vh 0 2vh 0;
+    /* background-color: blue; */
+    display: flex;
+    gap: 0 10px;
+}
+nav button
+{
+    width: 100%;
+    height: inherit;
+    border: none;
+}
+.nav-image
+{
+    width: 100%;
+    height: inherit;
+    filter: brightness(0.5);
+}
+.nav-image:hover
+{
+    filter: brightness(1);
+    cursor: pointer;
+}
+
+/* .nav-image
+{
+    width: 20%;
+    height: inherit;
+    filter: brightness(0.5);
+}
+.nav-image:hover
+{
+    filter: brightness(1);
+    cursor: pointer;
+} */
+
+
+/* ->->->| Main -> END |<-<-<- */
+
+#Prev
+{
+    font-size: 70px;
+    color: white;
+    background-color: transparent;
+    border: none;
+
+    position: absolute;
+    left: 100px;
+    bottom: 65px;
+}
+#Prev i:hover
+{
+    cursor: pointer;
+}
+
+#Next
+{
+    font-size: 70px;
+    color: white;
+    background-color: transparent;
+    border: none;
+    
+    position: absolute;
+    right: 100px;
+    bottom: 65px;
+}
+#Next i:hover
+{
+    cursor: pointer;
+}

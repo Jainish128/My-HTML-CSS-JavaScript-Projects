@@ -1,0 +1,104 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Date Interval </title>
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/">
+    <link rel="stylesheet" href="Date Interval.css">
+</head>
+<body>
+
+    <table border="1" cellspacing="10px">
+        <tr>
+            <th colspan="2" class="heading"> Date Interval </th>
+        </tr>
+        <tr>
+            <td class="ft"> From : </td>
+            <td><input type="date" id="date1"></td>
+        </tr>
+        <tr>
+            <td class="ft"> To : </td>
+            <td><input type="date" id="date2"></td>
+        </tr>
+        <tr align="center">
+            <td colspan="2"> 
+                <input type="submit" value="Calculate" id="calculate">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div id="result-box">
+                    <table>
+                        <tr>
+                            <td> Date internal between </td>
+                        </tr>
+                        <tr>
+                            <td>  </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    
+    
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Date Details</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Date Details</h1>
+        <form>
+            <div class="form-group">
+                <label for="fromDate">From Date:</label>
+                <input type="date" id="fromDate" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="toDate">To Date:</label>
+                <input type="date" id="toDate" class="form-control">
+            </div>
+            <button type="button" class="btn btn-primary" onclick="calculateDateDetails()">Calculate</button>
+        </form>
+        <br>
+        <div id="result" class="alert alert-info" style="display: none;"></div>
+    </div>
+
+    <script>
+        function calculateDateDetails() {
+            var fromDate = new Date(document.getElementById("fromDate").value);
+            var toDate = new Date(document.getElementById("toDate").value);
+
+            if (isNaN(fromDate) || isNaN(toDate)) {
+                alert("Please select valid dates.");
+                return;
+            }
+
+            var diffTime = toDate.getTime() - fromDate.getTime();
+            var diffDays = Math.ceil(diffTime / (1000 * 3600 * 24));
+            var diffWeeks = Math.ceil(diffDays / 7);
+            var diffMonths = (toDate.getMonth() + 1) - (fromDate.getMonth() + 1) + (toDate.getFullYear() - fromDate.getFullYear()) * 12;
+            var diffYears = toDate.getFullYear() - fromDate.getFullYear();
+
+            var result = document.getElementById("result");
+            result.innerHTML = "From: " + fromDate.toDateString() + "<br>";
+            result.innerHTML += "To: " + toDate.toDateString() + "<br>";
+            result.innerHTML += "Days: " + diffDays + "<br>";
+            result.innerHTML += "Weeks: " + diffWeeks + "<br>";
+            result.innerHTML += "Months: " + diffMonths + "<br>";
+            result.innerHTML += "Years: " + diffYears + "<br>";
+            result.style.display = "block";
+        }
+    </script>
+</body>
+
+</html>
