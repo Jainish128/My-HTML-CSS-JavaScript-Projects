@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Scroll Event Example</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            height: 2000px;
+            /* Set a height to enable scrolling */
+        }
+
+        .header {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: black;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header.active {
+            display: block;
+        }
+
+        .header-1 {
+            background-color: #333;
+        }
+
+        .header-2 {
+            background-color: #555;
+        }
+
+        .header-3 {
+            background-color: #777;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header header-1">Header 1</header>
+        <header class="header header-2">Header 2</header>
+        <header class="header header-3">Header 3</header>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const headers = document.querySelectorAll('.header');
+            const container = document.querySelector('.container');
+
+            function showHeaderOnScroll() {
+                headers.forEach((header, index) => {
+                    const headerRect = header.getBoundingClientRect();
+                    const containerRect = container.getBoundingClientRect();
+
+                    if (headerRect.bottom <= containerRect.bottom) {
+                        header.classList.add('active');
+                    } else {
+                        header.classList.remove('active');
+                    }
+                });
+            }
+
+            // Attach the scroll event to the container
+            container.addEventListener('scroll', showHeaderOnScroll);
+        });
+
+    </script>
+</body>
+
+</html>

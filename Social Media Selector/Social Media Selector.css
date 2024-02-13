@@ -1,0 +1,86 @@
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: sans-serif;
+    background: linear-gradient(135deg, purple 20%, orange 80%);
+}
+
+.menu
+{
+    background-color: lightgrey;
+    width: 300px;
+    /* opacity: 0.8; */
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.menu .fa-chevron-down
+{
+    transition: transform 0.2s;
+}
+
+.menu p
+{
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+}
+.social-lists
+{
+    width: 300px;
+    margin: 10px 0 0 0;
+    padding: 10px;
+    background: lightgray;
+    border-radius: 5px;
+}
+
+.social-lists li
+{
+    /* padding: 10px; */
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: padding 0.2s linear;
+}
+.social-lists li:hover 
+{
+    background-color: darkgray;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+.social-lists li .fa-brands
+{
+    margin: 10px 15px;
+}
+.rotate .fa-chevron-down
+{
+    transform: rotate(180deg);
+}
+.hide
+{
+    visibility: hidden;
+}
+
+
+
+
+

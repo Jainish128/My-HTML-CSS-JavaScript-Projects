@@ -1,0 +1,101 @@
+
+*
+{
+    margin: 0;
+    list-style: none;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    background-color: #2f3542;
+    font-family: cursive;
+}
+
+.form
+{
+    width: 400px;
+    position: absolute;
+    top: 15%;
+    border-radius: 8px;
+    /* background-color: yellow; */
+    box-shadow: 0 0 8px black;
+}
+
+.input
+{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+    border-radius: 8px 8px 0 0;
+    border: none;
+    /* border-bottom: 2px dashed green; */
+    font-size: 20px;
+    background-color: #dfe4ea;
+}
+.input::placeholder
+{
+    color: #57606f;
+    font-family: cursive;
+}
+.input:focus
+{
+    outline: none;
+    caret-color: green;
+}
+
+.list
+{
+    padding: 0;
+    margin: 0;
+}
+.list li
+{
+    padding: 15px;
+    border-top: 2px dashed #ced6e0;
+    position: relative;
+    background-color: #747d8c;
+    color: #ffffff;
+    font-size: 20px;
+}
+.list li:first-child
+{
+    border: none;
+}
+.list li:last-child
+{
+    border-radius: 0 0 8px 8px;
+}
+.list li .fa-trash
+{
+    color: #ced6e0;
+    font-size: 18px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.list li .fa-trash:hover
+{
+    font-size: 16px;
+    color: red;
+}
+
+.list li .checkbox
+{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    accent-color: green;
+    cursor: pointer;
+}
+
+.list li.checked
+{
+    color: #dfe4ea;
+    text-decoration: line-through;
+}

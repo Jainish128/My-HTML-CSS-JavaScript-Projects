@@ -1,0 +1,281 @@
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: arial;
+}
+body
+{
+    background-color: #555;
+}
+
+header
+{
+    width: 100%;
+    height: 80px;
+    background-color: #130f40;
+    display: flex;
+    border-bottom: 2px solid #333;
+    position: sticky;
+    top: 0;
+
+    /* display: block; */
+    opacity: 1;
+}
+header:hover
+{
+    background-color: white;
+}
+header:hover a,
+header:hover ul li a
+{
+    color: #2f3640;
+}
+
+.left-menu
+{
+    width: 25%;
+    height: 80px;
+    margin: 0 0 0 8%;
+    /* background-color: red; */
+}
+.left-menu ul
+{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    line-height: 80px;
+}
+.left-menu ul li
+{
+    padding: 0 20px;
+    font-size: 16px;
+}
+.left-menu ul li a
+{
+    color: white;
+}
+
+
+
+.logo
+{
+    width: 32%;
+    height: 80px;
+    /* background-color: orangered; */
+    text-align: center;
+    line-height: 80px;
+    font-size: 30px;
+}
+.logo a
+{
+    color: white;
+}
+
+
+
+.right-menu
+{
+    width: 26%;
+    height: 80px;
+    /* background-color: green; */
+}
+.right-menu ul
+{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    line-height: 80px;
+}
+.right-menu ul li
+{
+    padding: 0 13px;
+    font-size: 16px;
+}
+.right-menu ul li a
+{
+    color: white;
+}
+.right-menu ul li:last-child a
+{
+    font-size: 16px;
+    border-left: 2px solid silver;
+    padding-left: 25px;
+}
+
+
+
+/* ------------------------------------ */
+/* ------------------------------------ */
+/* ------------------------------------ */
+/* ------------------------------------ */
+/* ------------------------------------ */
+#second_header
+{
+    width: 100%;
+    height: 80px;
+    background-color: #192a56;
+    border-bottom: 2px solid #333;
+    position: sticky;
+    top: 0px;
+
+    /* display: none; */
+    opacity: 0;
+}
+#second_header ul
+{
+    width: 84%;
+    height: 80px;
+    margin: 0 8%;
+    /* background-color: red; */
+    display: flex;
+}
+#second_header ul li
+{
+    font-size: 15px;
+    /* padding: 0 15px; */
+    margin-right: 40px;
+    line-height: 80px;
+    text-transform: uppercase;
+}
+#second_header ul li:hover 
+{
+    border-bottom: 2px solid white;
+    transition: 0.3s linear;
+}
+
+#second_header ul li a
+{
+    color: white;
+}
+
+
+
+/* ------------------------------------ */
+/* ------------------------------------ */
+/* ------------------------------------ */
+/* ------------------------------------ */
+/* ------------------------------------ */
+
+.third_header
+{
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    display: flex;
+    border-bottom: 2px solid #333;
+    position: sticky;
+    top: 0;
+    
+    opacity: 0;
+}
+
+.logo_th
+{
+    width: 20%;
+    height: 80px;
+    /* background-color: red; */
+    line-height: 80px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+}
+.logo_th a
+{
+    color: #2f3640;
+}
+
+.third_header ul
+{
+    width: 20%;
+    height: 80px;
+    margin: 0 15% 0 50%;
+    /* background-color: green; */
+    display: flex;
+}
+.third_header ul li
+{
+    line-height: 80px;
+    padding: 0 0 0 35px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.third_header ul li:hover 
+{
+    text-decoration: underline red;
+}
+
+.third_header ul li a
+{
+    color: #2f3640;
+}
+.fa-chevron-down
+{
+    padding-left: 5px;
+}
+
+
+
+
+
+
+
+
+
+.scroll200
+{
+    width: 100%;
+    height: 200px;
+    background-color: lightsteelblue;
+    font-size: 30px;
+    padding: 50px;
+}
+.scroll2000
+{
+    width: 100%;
+    height: 2000px;
+    background-color: lightslategrey;
+    font-size: 35px;
+    padding: 75px;
+}
+.scroll1000
+{
+    width: 100%;
+    height: 1000px;
+    background-color: silver;
+    font-size: 35px;
+    padding: 75px;
+}
+
+
+/* ============================================ */
+/* -------------------------------------------- */
+/* --------------- Hover Menus ---------------  */
+/* -------------------------------------------- */
+/* ============================================ */
+
+.cars
+{
+    width: 100%;
+    height: 170px;
+    background-color: #fff;
+}
+.main_cars_menu
+{
+    width: 82%;
+    height: inherit;
+    margin: 0 9%;
+    background-color: red;
+}
+
+
+
+
+
+
+
+

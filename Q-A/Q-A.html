@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Q-A </title>
+
+    <link rel="stylesheet" href="Q-A.css">
+
+</head>
+<body>
+    
+
+    <table cellspacing="0" cellpadding="10px">
+        <form>
+            <tr>
+                <th class="heading"> QUIZ </th>
+            </tr>
+            <tr>
+                <th> <span id="quetion-number"> Quetion - 1 </span> </th>
+            </tr>
+            <tr>
+                <td>
+                    <span id="quetion">
+                        Which of the following languages belongs to Web Development ?
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="main">
+                        <div class="left">
+                            <input type="radio" name="option" id="a"> (A) <br><br>
+                            <input type="radio" name="option" id="b"> (B) <br><br>
+                            <input type="radio" name="option" id="c"> (C) <br><br>
+                            <input type="radio" name="option" id="d"> (D)
+                        </div>
+                        <div class="right">
+                            <span id="option-a"> Python </span> <br><br>
+                            <span id="option-b"> PHP </span> <br><br>
+                            <span id="option-d"> React JS </span> <br><br>
+                            <span id="option-c"> JavaScript </span> 
+                        </div>
+                    </div>
+                </td>                
+            </tr>
+            <tr align="center">
+                <td>
+                    <span id="notice"> </span>
+                </td>
+            </tr>
+            <tr align="center">
+                <td> 
+                    <input type="button" value="Submit" id="submit" onclick="quiz()">
+                    <!-- <input type="button" value="Next Quetion" id="next-quetion">  -->
+                </td>
+            </tr>
+        </form>
+    </table>
+
+
+
+
+    <script src="Q-A.js"></script>
+
+</body>
+</html>

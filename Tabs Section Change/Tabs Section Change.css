@@ -1,0 +1,196 @@
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+body
+{
+    font-family: cursive;
+}
+
+
+header
+{
+    width: 100%;
+    height: 60px;
+    background-color: #2f3542;
+    color: #ced6e0;
+    text-align: center;
+    line-height: 60px;
+    font-size: 2rem;
+}
+
+nav 
+{
+    width: 100%;
+    height: 50px;
+    background-color: #57606f;
+}
+nav > ul
+{
+    width: 90%;
+    height: 50px;
+    margin: 0 5%;
+    display: flex;
+}
+nav > ul > li
+{
+    width: 20%;
+    height: 50px;
+    color: #dfe4ea;
+    line-height: 50px;
+    text-align: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+nav > ul > li:first-child
+{
+    background-color: #747d8c;
+    border-radius: 50% 50% 0 0;
+}
+
+nav > ul > li:hover 
+{
+    background-color: #2f3542;
+    border-radius: 50% 50% 0 0;
+    transition: 0.5s ease;
+}
+
+
+/* ---------- Main - Section ---------- */
+.main-section
+{
+    width: 100%;
+    height: 629px;
+    background-color: orangered
+}
+
+.place-list
+{
+    width: 100%;
+    height: 50px;
+    background-color: #747d8c;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 0 0 12px;
+}
+.place-list li
+{
+    border-bottom: 2px solid #57606f;
+}
+
+.img-content
+{
+    width: 100%;
+    height: 579px;
+    background-color: #a4b0be;
+    display: flex;
+}
+.place-img
+{
+    width: 40%;
+    height: 500px;
+    margin: 40px 40px 30px 40px;
+    border-radius: 10px;
+}
+.content
+{
+    width: 52%;
+    height: 500px;
+    margin-top: 40px;
+    border: 2px dashed #2f3542;
+    border-radius: 10px;
+}
+.content h2
+{
+    text-align: center;
+    padding: 10px 0;
+    color: #2f3542;
+    border-bottom: 2px dashed #2f3542;
+}
+.content h3
+{
+    text-align: center;
+    padding: 5px 0 5px 0;
+    color: #2f3542;
+    border-bottom: 2px dashed #2f3542;
+}
+.content p
+{
+    padding: 15px 30px 0 30px;
+    text-align: justify;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------- Road Trip ---------- */
+.road-trip-name
+{
+    padding: 0 19px;
+    line-height: 50px;
+    color: #dfe4ea;
+    border-right: 2px solid #57606f;
+    cursor: pointer;
+    display: block;
+}
+.road-trip-name:first-child
+{
+    border-left: 2px solid #57606f;
+}
+
+
+
+.place-list li:last-child
+{
+    border: none;
+    border-bottom: 2px solid #57606f;
+    border-right: 2px solid #57606f;
+}
+.place-list li:first-child
+{
+    background-color: #2f3542;
+}
+.place-list li:hover 
+{
+    background-color: #2f3542;
+    transition: 0.5s;
+}
+
+/* ---------- Honeymoon Place ---------- */
+.honeymoon-places
+{
+    padding: 0 19px;
+    line-height: 40px;
+    color: #dfe4ea;
+    border-right: 2px solid #57606f;
+    cursor: pointer;
+    display: none;
+}
+.honeymoon-places:first-child
+{
+    border-left: 2px solid #57606f;
+}
+.honeymoon-places:nth-child(13)
+{
+    border-left: 2px solid #57606f
+}
+
+
+
+

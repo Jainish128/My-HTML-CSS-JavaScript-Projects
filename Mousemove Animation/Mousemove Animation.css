@@ -1,0 +1,45 @@
+
+body
+{
+    margin: 0;
+    height: 100vh;
+    background-color: black;
+    overflow: hidden;
+}
+
+span
+{
+    /* background: url(https://cdn4.iconfinder.com/data/icons/general-office/91/General_Office_54-512.png); */
+    /* background: linear-gradient(to right, red, yellow, green, blue, orangered); */
+    /* background: url(smoke-33825.png); */
+    /* background: url(https://cdn1.iconfinder.com/data/icons/space-travel-flat/340/space_astronomy_universe_galaxy_star_falling_meteor_comet_shiny-256.png); */
+    /* background: url(https://cdn1.iconfinder.com/data/icons/space-travel-flat/340/space_astronomy_system_planet_universe_galaxy_star_neptune-256.png); */
+    background: url(https://cdn1.iconfinder.com/data/icons/weather-and-disaster-flat/340/snow_winter_snowflake_season_christmas_cold_flake_snowfall_frost_ice-512.png);
+    /* background-color:orangered; */
+    background-size: cover;
+    border-radius: 20% 30% 20% 30%;
+    width: 50px;
+    /* height: 50px; */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    animation: animate 5s linear;
+}
+
+@keyframes animate 
+{
+    0%
+    {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+        filter: hue-rotate(0);
+    }    
+    100%
+    {
+        transform: translate(-50%, -5000%);
+        opacity: 0;
+        filter: hue-rotate(720deg);
+    }    
+}

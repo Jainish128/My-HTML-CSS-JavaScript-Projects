@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Kia Seltos Header </title>
+
+    <link rel="stylesheet" href="Kia Seltos Header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+
+</head>
+<body>
+    
+    <header id="first_header">
+        <div class="left-menu">
+            <ul>
+                <li><a href="#"> Cars </a></li>
+                <li><a href="#"> Buy </a></li>
+                <li><a href="#"> Owners </a></li>
+                <li><a href="#"> VR Showroom </a></li>
+            </ul>
+        </div>
+        <div class="logo"><a href="#"> KIA </a></div>
+        <div class="right-menu">
+            <ul>
+                <li><a href="#"> Kia Connect </a></li>
+                <li><a href="#"> Discover Kia </a></li>
+                <li>
+                    <a href="#"> 
+                        <i class="fa-solid fa-location-dot"></i>
+                        Find a Dealer 
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+
+    <div class="second_header" id="second_header">
+        <ul>
+            <li><a href="#"> seltos </a></li>
+            <li><a href="#"> seltos x-line </a></li>
+            <li><a href="#"> carens </a></li>
+            <li><a href="#"> sonet </a></li>
+            <li><a href="#"> sonet x-line </a></li>
+            <li><a href="#"> sonet aurochs edition </a></li>
+            <li><a href="#"> ev6 </a></li>
+        </ul>
+    </div>
+
+    <div class="third_header" id="third_header">
+        <div class="logo_th"><a href="#"> SELTOS </a></div>
+        <ul>
+            <li><a href="#"> Gallery </a></li>
+            <li><a href="#"> Specs </a></li>
+            <li>
+                <a href="#"> 
+                    Buy <i class="fa-solid fa-chevron-down"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+
+ <!-- --------------------------------------------  -->
+ <!-- --------------- Hover Menus ---------------   -->
+ <!-- --------------------------------------------  -->
+
+
+    <section id="cars" class="cars">
+        <div class="main_cars_menu">
+            
+        </div>
+    </section>
+
+
+<!-- ============================================  -->
+<!-- ============================================  -->
+<!-- ============================================  -->
+
+
+    <div class="scroll200"> 200px Scroll </div>
+    <div class="scroll2000"> 
+        2000px Scroll <br><br><br>
+        2000px Scroll <br><br><br>
+        2000px Scroll <br><br><br>
+        2000px Scroll <br><br><br>
+        2000px Scroll <br><br><br>
+        2000px Scroll <br><br><br>
+        2000px Scroll <br><br><br>
+        2000px Scroll <br><br><br>
+        2000px Scroll <br><br><br>
+        2000px Scroll <br><br><br>
+        2000px Scroll <br><br><br>
+        2000px Scroll <br><br><br>
+        2000px Scroll <br><br><br>
+        2000px Scroll <br><br><br>
+
+    </div>
+    <div class="scroll1000"> 1000px Scroll </div>
+
+
+    <!-- <script src="Kia Seltos Header.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        
+        $(document).ready(function () {
+            
+            $(window).scroll(function () {
+                
+                var scroll = $(window).scrollTop()
+                var first_header = document.getElementById("first_header");
+                var second_header = document.getElementById("second_header");
+                var third_header = document.getElementById("third_header");
+
+                if (scroll > 200)
+                {   
+                    $(second_header).slideDown();
+                    $(second_header).css({"opacity": "1"})
+                }
+                else
+                {
+                    $(second_header).slideUp();
+                    $(second_header).css({"opacity": "0"})
+                    $(first_header).slideDown();
+                    $(first_header).css({"opacity": "1"})
+                }
+
+                if (scroll > 2000)
+                {
+                    $(first_header).css({"opacity": "0"})
+                    $(second_header).css({"opacity": "0"})
+                    $(third_header).slideDown();
+                    $(third_header).css({"opacity": "1"})
+                }
+                else
+                {
+                    $(third_header).slideUp();
+                    $(third_header).css({"opacity": "0"})
+                }
+
+
+            })
+
+        })
+
+    </script>
+</body>
+</html>

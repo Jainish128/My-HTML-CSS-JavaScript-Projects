@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 3D Portfolio Website </title>
+
+    <link rel="stylesheet" href="3D Portfolio.css">
+    <!-- Box Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Font Awasome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+</head>
+
+<body>
+    
+    <div class="wrapper">
+        <div class="cover cover-left"></div>
+        <div class="cover cover-right"></div>
+
+        <div class="book">
+            <!-- Profile Page -->
+            <div class="book-page page-left">
+                <div class="profile-page">
+                    <img src="img/My Photo cropped.jpeg" alt="">
+                    <h1> Jainish Patel </h1>
+                    <h3> Front-End Developer </h3>
+
+                    <div class="social-media">
+                        <a href="#"><i class='bx bxl-linkedin'></i></a>
+                        <a href="#"><i class='bx bxl-instagram' ></i></a>
+                        <a href="#"><i class='bx bxl-facebook' ></i></a>
+                        <a href="#"><i class='bx bxl-twitter' ></i></a>
+                    </div>
+
+                    <p>
+                        My Passion is to build Beautiful, Responsive, Dynamic and User-Friendly websites which are well optimized and have a good performance. I am always looking for new opportunities to learn and grow.
+                    </p>
+
+                    <div class="btn-box">
+                        <a href="#" class="btn"> Download CV </a>
+                        <a href="#" class="btn contact-me"> Contact Me </a>
+                    </div>
+
+                </div>
+            </div> 
+
+            <!-- Page 1 & 2 -->
+            <div class="book-page page-right turn" id="turn-1">
+                <!-- page 1 (Education) -->
+                <div class="page-front">
+                    <h1 class="title"> Education </h1>
+
+                    <div class="education-box">
+                        <div class="education-content">
+                            <span class="year"> 
+                                <i class='bx bxs-calendar'></i> 2022 - 2023 
+                            </span>
+                            <h3> Front-End Developer </h3>
+                            <p> I have learned Front-End Development in TOPS Technologies. </p>
+                        </div>
+                        <div class="education-content">
+                            <span class="year"> 
+                                <i class='bx bxs-calendar'></i> 2023 - 2025 
+                            </span>
+                            <h3> MCA </h3>
+                            <p> Currently, i am pursing masters in Master of Computer Application in Manglyatan University. </p>
+                        </div>
+                        <div class="education-content">
+                            <span class="year"> 
+                                <i class='bx bxs-calendar'></i> 2020 - 2023 
+                            </span>
+                            <h3> B.Com. </h3>
+                            <p> I completed my bachelors  in Bachelors  of Commerce in Lokmanya College of Commerce.  </p>
+                        </div>
+                        <div class="education-content">
+                            <span class="year"> 
+                                <i class='bx bxs-calendar'></i> 2019 - 2020 
+                            </span>
+                            <h3> 12th Commerce </h3>
+                            <p> I completed 12th Commerce in Shri Muktajivam Vidhyalaya School. </p>
+                        </div>
+                    </div>
+
+                    <!-- Page Number -->
+                    <span class="page-number"> 1 </span>
+                    <!-- Next Page Button -->
+                    <span class="nextprev-btn" data-page="turn-1">
+                        <i class='bx bx-chevrons-right'></i>
+                        <!-- <i class='bx bx-chevron-right' s></i> -->
+                    </span>
+
+                </div>
+
+                <!-- page 1 () -->
+                <div class="page-back">
+                    <h1 class="title"> My Skills </h1>
+
+
+                    <div class="skills-box">
+                        <div class="skills-content">
+                            <h3> Languages </h3>
+                            <div class="content">
+                                <span> <i class='bx bxl-html5'></i> HTML </span>
+                                <span> <i class='bx bxl-css3' ></i> CSS </span>
+                                <span> <i class='bx bxl-sass' ></i> SASS </span>
+                                <span> <i class='bx bxl-javascript' ></i> JavaScript </span>
+                            </div>
+                        </div>
+                        <div class="skills-content">
+                            <h3> Frameworks </h3>
+                            <div class="content">
+                                <span> <i class='bx bxl-bootstrap' ></i> Bootstrap </span>
+                                <span> <i class='bx bxl-react' ></i> React JS </span>
+                            </div>
+                        </div>
+                        <div class="skills-content">
+                            <h3> Libraries </h3>
+                            <div class="content">
+                                <span> <i class='bx bxl-jquery' ></i> jQuery </span>
+                                <span> <i class="fa-solid fa-m"></i> Material UI </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Page Number -->
+                    <span class="page-number"> 2 </span>
+                    <!-- Previous Page Button -->
+                    <span class="nextprev-btn back" data-page="turn-1">
+                        <i class='bx bx-chevrons-left'></i>
+                        <!-- <i class='bx bx-chevron-right' s></i> -->
+                    </span>
+
+                </div>
+            </div>
+
+
+            <!-- Page 3 & 4 -->
+            <div class="book-page page-right turn" id="turn-2">
+                <!-- Page 3 (Latest Projects or My Portfolio) -->
+                <div class="page-front">
+                    <h1 class="title"> Latest Projects </h1>
+
+                    <div class="portfolio-box">
+                        <div class="img-box">
+                            <img src="img/Project - Barbeque Nation.png" alt="">
+                        </div>
+
+                        <div class="info-box">
+                            <div class="info-title">
+                                <h3> Barbeque Nation (Clone) </h3>
+                                <!-- <a href="#"> Live Preview <i class='bx bx-link-external'></i> </a> -->
+                            </div>
+                            <p>
+                                This is Clone Project created using HTML, CSS, JavaScript, jQuery and Bootstrap.
+                            </p>
+                        </div>
+    
+                        <div class="btn-box">
+                            <a href="#" class="btn"> Live Preview &nbsp; <i class='bx bx-link-external'></i> </a>
+                            <a href="#" class="btn"> More Projects </a>
+                        </div>
+                    </div>
+
+                    
+                    <!-- Page Number -->
+                    <span class="page-number"> 3 </span>
+                    <!-- Next Page Button -->
+                    <span class="nextprev-btn" data-page="turn-2">
+                        <i class='bx bx-chevrons-right'></i>
+                        <!-- <i class='bx bx-chevron-right' s></i> -->
+                    </span>
+                    
+                </div>
+
+                <!-- Page 3 (Latest Projects or My Portfolio) -->
+                <div class="page-back">
+                    <h1 class="title"> Contact Me </h1>
+
+                    <div class="contact-box">
+                        <form action="#">
+                            <input type="text" class="field" placeholder="Enter Your Full Name here..." required>
+                            <input type="email" class="field" placeholder="Enter Your Email ID here..." required>
+                            <textarea class="field" placeholder="Enter your Message here..."></textarea>
+                            <input type="submit" class="btn" value="Send Message">
+                        </form>
+                    </div>
+
+                    <!-- Page Number -->
+                    <span class="page-number"> 4 </span>
+                    <!-- Previous Page Button -->
+                    <span class="nextprev-btn back" data-page="turn-2">
+                        <i class='bx bx-chevrons-left'></i>
+                        <!-- <i class='bx bx-chevron-right' s></i> -->
+                    </span>
+
+                    <a href="#" class="back-profile">
+                        <p> Profile </p>
+                        <i class='bx bxs-user'></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <script src="3D Portfolio.js"></script>
+</body>
+</html>

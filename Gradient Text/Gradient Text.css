@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Great Vibes', cursive;
+}
+
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: black;
+}
+
+h1
+{
+    background: linear-gradient(45deg, #ff0000, #ffff00, #ff00f3, #66ff00, #16bffd, #a80077);
+    background-size: 400%;
+    /* background-size: 200%; */
+    font-size: 6.3rem;
+    letter-spacing: 0.5rem;
+    color: #000;
+    padding: 10px;
+
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 5px transparent;
+    animation: animate 10s linear infinite;
+}
+
+@keyframes animate 
+{
+    0% { background-position: 0%; }    
+    100% { background-position: 400%; }    
+}

@@ -1,0 +1,65 @@
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: cursive;
+    background-color: #0c2461;
+}
+
+#box
+{
+    width: 300px;
+    height: 300px;
+    background-color: lightblue;
+    border-radius: 10px;
+}
+
+#month
+{
+    height: 60px;
+    background-color: #0a3d62;
+    border-radius: 10px 10px 0 0;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 60px;
+}
+#day
+{
+    height: 60px;
+    background-color: #3c6382;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    line-height: 60px;
+}
+#date
+{
+    height: 120px;
+    background-color: #60a3bc;
+    color: white;
+    font-size: 100px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 115px;
+}
+#year
+{
+    height: 60px;
+    background-color: #82ccdd;
+    border-radius: 0 0 10px 10px;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    line-height: 60px;
+}

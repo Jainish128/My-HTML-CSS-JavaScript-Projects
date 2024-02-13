@@ -1,0 +1,89 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: black;
+}
+
+.wrapper
+{
+    display: flex;
+}
+
+.wrapper .first-text
+{
+    font-size: 60px;
+    color: #fff;
+}
+
+.wrapper .sec-texts
+{
+    height: 90px;
+    /* background-color: red; */
+    line-height: 85px;
+    overflow: hidden;
+}
+
+.sec-texts li
+{
+    font-size: 60px;
+    color: #0ef;
+    list-style: none;
+    padding: 0 20px;
+    margin-bottom: 5px;
+    text-shadow: 0 0 5px #0ef;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation: slide 12s steps(4) infinite, colorful 6s infinite;
+    position: relative;
+    top: 0;
+}
+@keyframes slide 
+{
+    100%
+    {
+        top: -360px;
+    }    
+}
+@keyframes colorful 
+{
+    100% 
+    {
+        filter: hue-rotate(360deg);
+    }   
+}
+
+.sec-texts li span
+{
+    position: relative;
+}
+
+.sec-texts li span::before 
+{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 650px;
+    height: 90px;
+    /* background-color: red; */
+    border-left: 3px solid #0ef;
+    animation: typing 1.5s steps(19) infinite alternate;
+}
+
+@keyframes typing 
+{
+    100% 
+    {
+        left: 100%;
+        margin: 0 -35px 0 35px;
+    }   
+}

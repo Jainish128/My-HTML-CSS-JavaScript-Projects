@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Swpier Slider </title>
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .slider_container
+        {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container
+        {
+            width: 80%;
+            height: 500px;
+        }
+        .img_box, .img_box img
+        {
+            width: 100%;
+            height: 450px;
+        }
+        .card_slider
+        {
+            padding: 0 75px 50px 75px;
+            /* padding-bottom: 50px; */
+            /* padding-left: 75px; */
+            /* padding-right: 75px; */
+        }
+        
+    </style>
+
+</head>
+<body>
+
+    
+    <div class="slider_container">
+        <div class="container">
+
+            <!-- Swiper Slider Structure -> START -->
+            <div class="swiper card_slider">
+                <div class="swiper-wrapper">
+                    <!-- Slide - 1 -->
+                    <div class="swiper-slide">
+                        <div class="img_box">
+                            <img src="https://www.netcarshow.com/Land_Rover-Range_Rover_Velar-2018-1600-4b.jpg" alt="Slider Image">
+                        </div>
+                    </div>
+                    <!-- Slide - 2 -->
+                    <div class="swiper-slide">
+                        <div class="img_box">
+                            <img src="https://stat.overdrive.in/wp-content/uploads/2021/02/2021-Toyota-Fortuner-Legender-191-of-198.jpg" alt="Slider Image">
+                        </div>
+                    </div>
+                    <!-- Slide - 3 -->
+                    <div class="swiper-slide">
+                        <div class="img_box">
+                            <img src="https://wallpapers.com/images/hd/toyota-fortuner-custom-jet-black-color-przv6k586qsn6gbf.jpg" alt="Slider Image">
+                        </div>
+                    </div>
+                    <!-- Slide - 4 -->
+                    <div class="swiper-slide">
+                        <div class="img_box">
+                            <img src="https://www.team-bhp.com/sites/default/files/styles/amp_high_res/public/Hilton%20Landscape%20crop.jpg" alt="Slider Image">
+                        </div>
+                    </div>
+                    <!-- Slide - 5 -->
+                    <div class="swiper-slide">
+                        <div class="img_box">
+                            <img src="https://imgd-ct.aeplcdn.com/1056x660/n/cw/ec/40087/thar-exterior-right-rear-three-quarter.jpeg?q=80" alt="Slider Image">
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination" id="dots"></div>
+            </div>
+            <!-- Swiper Slider Structure -> END -->
+
+        </div>
+    </div>
+
+
+
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".card_slider", {
+        spaceBetween: 25,
+        loop: true,
+        // speed: 3000,         // Speed not Working !!!
+        autoplay: {
+            delay: 3000
+        },
+        // grabCursor: true,        // for Grab Cursor and Move Slides
+        // centeredSlides: true,    // For Main Slide show in Center of width and other space show Before & After Slide's Half/Full Part.
+
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+
+        cssMode: true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+
+        breakpoints: {
+        320: {
+          slidesPerView: 1
+        },
+        991: {
+          slidesPerView: 2
+        }
+      },
+
+        });
+    </script>
+
+</body>
+</html>
